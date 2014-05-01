@@ -33,7 +33,7 @@ After these steps we are done, and we can commit our data `git commit -m "messag
 
    - **Create 2 more branches with at least one unique committed file per branch (1 pt)**
 
-To create a branch use `git branch <branch_name>`.<br>When we'll create a new branch, the created branch will have all files from the parent branch.<br>Suppose we have a repository already initialized, a master branch with a `test.txt`.
+To create a branch use `git branch <branch_name>`.<br>When we'll create a new branch, the created branch will have all files from the parent branch.<br>To switch onto another branch use `git checkout <branch_name>`. To see all branches use `git branch`.<br>Suppose we have a repository already initialized, a master branch with a `test.txt`.
 ```
 git branch copy         # created a copy branch that inherits all master files
                         # now copy has `test.txt` as well
