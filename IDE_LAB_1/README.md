@@ -117,6 +117,13 @@ Shift text `:row1,row2>, :row1,row2<`<br>
 Exit `:q, :q!, :cq, :wq, :wq!, ZZ`<br>
 Suspend `ctrl-z, :st, :sus`<br>
 
+   - **Create a VCS alias (1 pt)**
+
+An alias is acting like a shortcut. An example of an alias :<br>
+`git config --global alias.logl 'log --oneline'`
+To delete the following allis we'll use something like :<br>
+`git config --global --unset alias.logl`
+
 
 
 
