@@ -104,6 +104,19 @@ After executing the changes, make the commit.
 
 As I am using the VIM editor, in order to have a highlighted code I can switch between `:syntax on/off` in the command mode.
 
+   - **Master any CLI editor (ex. VIM). Learn 10 commands' sets  to prove your mastery (1 pt)**
+
+Insert Text `a, A, i, I, o, O`<br>
+Delete Text `x, X, d, dd, D`<br>
+Replace Text `r, R`<br>
+Undo/Redo `u, U, :u, ctrl-r, :red`<br>
+Moving `k, l, j, h`<br>
+Visual Mode `v, V` and using `d, c, <, >`
+Searching `/<CR>, ?<CR>`
+Shift text `:row1,row2>, :row1,row2<`
+Exit `:q, :q!, :cq, :wq, :wq!, ZZ`<br>
+Suspend `ctrl-z, :st, :sus`
+
 
 
 
