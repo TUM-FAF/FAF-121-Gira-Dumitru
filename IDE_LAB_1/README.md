@@ -68,5 +68,45 @@ To reset a branch to previous commit use `git reset --hard HEAD`. <br>
 To reset a branch to a specific commit use `git reset --hard <commit_id>` where commit_id is the ID of the commit.<br>
 The list of all commits and their IDs could be seen using `git log` or `git log --oneline` .
 
+   - **Create a VCS merge conflict and solve it (1 pt)**
+
+Usually merge conflicts occure when on the same line, different pieces of code are trying to be concatenated.<br>
+Suppose we have the following piece of code, where master branch has a `foo` with `merge` string in it
+```
+git branch first     # creating first branch
+git branch second    # creating second branch
+git checkout first   # switched onto the first branch
+vim foo              # now foo from first looks like `merge conflict`
+git add .            # add to staging area
+git commit -m "conflict"  #commit
+git checkout second  # switched onto the second branch
+vim foo              # now foo from second looks like `merge solved`
+git add .            # add to staging area
+git commit -m "solved"    #commit
+```
+Now if we try to merge the first and the second branch `git merge first` we obtain a conflict:
+```
+Auto-merging foo
+CONFLICT (content): Merge conflict in foo
+Automatic merge failed; fix conflicts and then commit the result.
+```
+To fix the conflict we have to open the `foo` and manually make the changes. Our conflict looks like :
+```
+<<<<<<< HEAD
+merge solved
+=======
+merge conflict
+>>>>>>> first
+```
+After executing the changes, make the commit.
+
+
+
+
+
+
+
+
+
 
 
