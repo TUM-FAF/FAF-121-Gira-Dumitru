@@ -100,6 +100,10 @@ merge conflict
 ```
 After executing the changes, make the commit.
 
+   - **Make your CLI text editor to highlight code (1 pt)**
+
+As I am using the VIM editor, in order to have a highlighted code I can switch between `:syntax on/off` in the command mode.
+
 
 
 
