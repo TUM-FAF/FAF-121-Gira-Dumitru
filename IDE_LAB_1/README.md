@@ -8,7 +8,7 @@ Command Line Interface; CLI Editors; Setting Server Environment; Version Control
 ##Completed Tasks
 ######All tasks are done on a Ubuntu Operating System with GIT and VIM installed
 
-   - #### Create your own server (ex. virtual machine) (2 pt)
+   - **Create your own server (ex. virtual machine) (2 pt)**
     
 I've installed Virtual Machine with a UBUNTU guest operating system. <br>For installing the server I've used `sudo apt-get install ssh`, therefore I was able to manage the SSH-Server through `sudo service ssh (start | stop | restart)`
 
