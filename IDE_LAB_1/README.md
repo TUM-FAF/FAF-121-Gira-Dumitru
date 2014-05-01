@@ -111,11 +111,11 @@ Delete Text `x, X, d, dd, D`<br>
 Replace Text `r, R`<br>
 Undo/Redo `u, U, :u, ctrl-r, :red`<br>
 Moving `k, l, j, h`<br>
-Visual Mode `v, V` and using `d, c, <, >`
-Searching `/<CR>, ?<CR>`
-Shift text `:row1,row2>, :row1,row2<`
+Visual Mode `v, V` and using `d, c, <, >`<br>
+Searching `/<CR>, ?<CR>`<br>
+Shift text `:row1,row2>, :row1,row2<`<br>
 Exit `:q, :q!, :cq, :wq, :wq!, ZZ`<br>
-Suspend `ctrl-z, :st, :sus`
+Suspend `ctrl-z, :st, :sus`<br>
 
 
 
