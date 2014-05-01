@@ -6,7 +6,7 @@ Command Line Interface; CLI Editors; Setting Server Environment; Version Control
 
 <br>
 ##Completed Tasks
-###### All tasks are done on a Ubuntu Operating System with GIT and VIM installed
+######All tasks are done on a Ubuntu Operating System with GIT and VIM installed
 
    - #### Create your own server (ex. virtual machine) (2 pt)
     
