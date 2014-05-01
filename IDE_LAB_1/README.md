@@ -22,5 +22,15 @@ To initialize a repository on server go to your desired location, and use `git i
 
    - **Create a file in repository folder, write in your name, save it and commit it**
 
+```
+touch <file_name>       # to create a file
+vim <file_name>         # open with your CLI editor
+                        # in VIM use 'i' to enter insert mode and insert your name
+                        # use :wq to write the file and exit
+```
+Now before commiting we need to check the untracked files using `git status`. If there are present such files, we need to add them to the staging area, this is done by `git add <file_name>` or `git add .` to add all untracked files.
+After these steps we are done, and we can commit our data `git commit -m "message"`
+
+
 
 
