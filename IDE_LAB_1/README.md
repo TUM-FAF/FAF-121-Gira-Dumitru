@@ -120,7 +120,7 @@ Suspend `ctrl-z, :st, :sus`<br>
    - **Create a VCS alias (1 pt)**
 
 An alias is acting like a shortcut. An example of an alias : `git config --global alias.logl 'log --oneline'`<br>
-To delete the following allis we'll use something like : `git config --global --unset alias.logl`
+To delete the following alias we'll use something like : `git config --global --unset alias.logl`
 
 
 
