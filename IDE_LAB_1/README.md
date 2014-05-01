@@ -58,15 +58,15 @@ In the same manner can be created other branches.
    - **Set a branch to track a remote origin on which you are able to push ( github, bitbucket ) (1 pt)**
 
 To upload on github we have to announce the git that we don't want to store our files locally.<br>
-For this we've used our generated SSH public key , added in SSH-Keys on github,created a repository and made a connection 
-`git remote add <name> <ssh_repo_link>`
+For this we've used our generated SSH public key, added in SSH-Keys on github,created a repository and made a connection 
+<br>`git remote add <name> <ssh_repo_link>`
 <br>In order to upload our files on github use : `git push <name> <branch_name>`
 
    - **Reset a branch to previous commit, reset a branch to some specific commit (1 pt)**
 
 To reset a branch to previous commit use `git reset --hard HEAD`. <br>
 To reset a branch to a specific commit use `git reset --hard <commit_id>` where commit_id is the ID of the commit.<br>
-The list of all commits and their IDs use `git log` or `git log --oneline` .
+The list of all commits and their IDs could be seen using `git log` or `git log --oneline` .
 
 
 
