@@ -33,7 +33,7 @@ After these steps we are done, and we can commit our data `git commit -m "messag
 
    - **Connect to server using public key (1 pt)**
 
-To create s public key, we'll need a key-generator. I've used the same Git Bash with `ssh-keygen` command. Therefore on my local computer were created a public and a private key. So in order to connect with pub key I'll had to send it to the server `scp .ssh/id_rsa.pub student@192.168.158.128: `, and notice that (:) are important.<br>
+To create s public key, we'll need a key-generator. I've used the same Git Bash with `ssh-keygen` command. Therefore on my local computer were created a public and a private key. So in order to connect with pub key I'll had to send it to the server<br>`scp .ssh/id_rsa.pub student@192.168.158.128: `, and notice that (:) are important.<br>
 Now I moved the content of id_rsa.pub  in .ssh/authorized_keys: `cat id_rsa.pub >> .ssh/authorized_keys `.<br>
 If some problems appear, we'll need to create the folder manually with some paramers
 ```
@@ -54,6 +54,14 @@ git add .               # adding to the staging area
 git commit -m "new file on copy branch"   #commit
 ```
 In the same manner can be created other branches.
+
+   - **Set a branch to track a remote origin on which you are able to push ( github, bitbucket ) (1 pt)**
+
+To upload on github we have to announce the git that we don't want to store our files locally.<br>
+For this we've used our generated SSH-key , added in SSH-Keys on github,created a repository and made a connection :
+`git remote add <name> <ssh_repo_link>`
+<br>In order to upload our files on github use : `git push <name> <branch_name>`
+
 
 
 
