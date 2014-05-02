@@ -32,5 +32,12 @@ This is done by using in `WM_SIZE` message, the `MoveWindow()` function which ha
 
   - **Make elements to interact or change other elements (0-2 pt)**
     - By clicking `Submit` button, the text from `textArea1` is sent to `textArea2`<br>
-      The text from `textArea` is stored in `textStore` then is sent to `textArea` through `SendMessage(textArea2,      
+      The text from `textArea1` is stored in `textStore` then is sent to `textArea2` through `SendMessage(textArea2,      
       EM_REPLACESEL, 0, (LPARAM)textStore)`
+    - By clicking `Clear` button, is deleted all text from `textArea2`<br>
+      This is done using `SendMessage(textArea2, WM_SETTEXT, NULL, NULL)`
+    - By clicking `Red, Green, Blue` buttons, the text color from `textArea2` is colored respectively.<br>
+      As this text input is read-only, all messages are managed in `WM_CTLCOLORSTATIC`. To have 3 colors, I've used 3   
+      different flags, so when one is enabled, 2 others - are disabled. Were created local brushes and text color has     
+      been set using `SetTextColor`. Also it is important to update the region after the button is cliked using 
+      `InvalidateRect` function.
