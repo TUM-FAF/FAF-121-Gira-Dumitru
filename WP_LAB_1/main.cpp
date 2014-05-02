@@ -110,235 +110,232 @@ LRESULT CALLBACK WindowProcedure (HWND hwnd, UINT message, WPARAM wParam, LPARAM
     switch (message)                  /* handle the messages */
     {
         case WM_CREATE:
-            {
-                textArea1 = CreateWindowEx(WS_EX_CLIENTEDGE, TEXT("EDIT"), TEXT(" "),
-                                           WS_VISIBLE | WS_CHILD | ES_MULTILINE | ES_AUTOVSCROLL | WS_VSCROLL,
-                                           0, 0, 0, 0,
-                                           hwnd, (HMENU)IDC_TEXT1, GetModuleHandle(NULL), NULL);
-                buttonSubmit = CreateWindowEx(NULL, TEXT("BUTTON"), TEXT("Submit"),
-                                           WS_VISIBLE | WS_CHILD | BS_DEFPUSHBUTTON,
-                                           0, 0, 0, 0,
-                                           hwnd, (HMENU)IDC_BUTTON1, GetModuleHandle(NULL), NULL);
-                buttonClear =  CreateWindowEx(NULL, TEXT("BUTTON"), TEXT("Clear"),
-                                           WS_VISIBLE | WS_CHILD | BS_DEFPUSHBUTTON,
-                                           0, 0, 0, 0,
-                                           hwnd, (HMENU)IDC_BUTTON2, GetModuleHandle(NULL), NULL);
-                textArea2 = CreateWindowEx(WS_EX_CLIENTEDGE, TEXT("EDIT"), TEXT(" "),
-                                           WS_VISIBLE | WS_CHILD | ES_MULTILINE | ES_AUTOVSCROLL | WS_VSCROLL | ES_READONLY,
-                                           0, 0, 0, 0,
-                                           hwnd, (HMENU)IDC_TEXT1, GetModuleHandle(NULL), NULL);
-                buttonRed = CreateWindowEx(NULL, TEXT("BUTTON"), TEXT("Red"),
-                                           WS_VISIBLE | WS_CHILD | BS_DEFPUSHBUTTON,
-                                           0, 0, 0, 0,
-                                           hwnd, (HMENU)IDC_BUTTON3, GetModuleHandle(NULL), NULL);
-                buttonGreen = CreateWindowEx(NULL, TEXT("BUTTON"), TEXT("Green"),
-                                           WS_VISIBLE | WS_CHILD | BS_DEFPUSHBUTTON,
-                                           0, 0, 0, 0,
-                                           hwnd, (HMENU)IDC_BUTTON4, GetModuleHandle(NULL), NULL);
-                buttonBlue = CreateWindowEx(NULL, TEXT("BUTTON"), TEXT("Blue"),
-                                           WS_VISIBLE | WS_CHILD | BS_DEFPUSHBUTTON,
-                                           0, 0, 0, 0,
-                                           hwnd, (HMENU)IDC_BUTTON5, GetModuleHandle(NULL), NULL);
-                HGDIOBJ defaultFont = GetStockObject(DEFAULT_GUI_FONT);
-                SendMessage(textArea1, WM_SETTEXT, NULL, (LPARAM)"Insert text here... ");
-                SendMessage(buttonSubmit, WM_SETFONT, (WPARAM)defaultFont, MAKELPARAM(FALSE,0));
-                SendMessage(buttonClear, WM_SETFONT, (WPARAM)defaultFont, MAKELPARAM(FALSE,0));
-                break;
-            }
+        {
+            textArea1 = CreateWindowEx(WS_EX_CLIENTEDGE, TEXT("EDIT"), TEXT(" "),
+                                       WS_VISIBLE | WS_CHILD | ES_MULTILINE | ES_AUTOVSCROLL | WS_VSCROLL,
+                                       0, 0, 0, 0,
+                                       hwnd, (HMENU)IDC_TEXT1, GetModuleHandle(NULL), NULL);
+            buttonSubmit = CreateWindowEx(NULL, TEXT("BUTTON"), TEXT("Submit"),
+                                       WS_VISIBLE | WS_CHILD | BS_DEFPUSHBUTTON,
+                                       0, 0, 0, 0,
+                                       hwnd, (HMENU)IDC_BUTTON1, GetModuleHandle(NULL), NULL);
+            buttonClear =  CreateWindowEx(NULL, TEXT("BUTTON"), TEXT("Clear"),
+                                       WS_VISIBLE | WS_CHILD | BS_DEFPUSHBUTTON,
+                                       0, 0, 0, 0,
+                                       hwnd, (HMENU)IDC_BUTTON2, GetModuleHandle(NULL), NULL);
+            textArea2 = CreateWindowEx(WS_EX_CLIENTEDGE, TEXT("EDIT"), TEXT(" "),
+                                       WS_VISIBLE | WS_CHILD | ES_MULTILINE | ES_AUTOVSCROLL | WS_VSCROLL | ES_READONLY,
+                                       0, 0, 0, 0,
+                                       hwnd, (HMENU)IDC_TEXT1, GetModuleHandle(NULL), NULL);    
+            buttonRed = CreateWindowEx(NULL, TEXT("BUTTON"), TEXT("Red"),
+                                       WS_VISIBLE | WS_CHILD | BS_DEFPUSHBUTTON,
+                                       0, 0, 0, 0,
+                                       hwnd, (HMENU)IDC_BUTTON3, GetModuleHandle(NULL), NULL);
+            buttonGreen = CreateWindowEx(NULL, TEXT("BUTTON"), TEXT("Green"),
+                                       WS_VISIBLE | WS_CHILD | BS_DEFPUSHBUTTON,
+                                       0, 0, 0, 0,
+                                       hwnd, (HMENU)IDC_BUTTON4, GetModuleHandle(NULL), NULL);
+            buttonBlue = CreateWindowEx(NULL, TEXT("BUTTON"), TEXT("Blue"),
+                                       WS_VISIBLE | WS_CHILD | BS_DEFPUSHBUTTON,
+                                       0, 0, 0, 0,
+                                       hwnd, (HMENU)IDC_BUTTON5, GetModuleHandle(NULL), NULL);
+            HGDIOBJ defaultFont = GetStockObject(DEFAULT_GUI_FONT);
+            SendMessage(textArea1, WM_SETTEXT, NULL, (LPARAM)"Insert text here... ");
+            SendMessage(buttonSubmit, WM_SETFONT, (WPARAM)defaultFont, MAKELPARAM(FALSE,0));
+            SendMessage(buttonClear, WM_SETFONT, (WPARAM)defaultFont, MAKELPARAM(FALSE,0));
+            break;
+        }
 
         case WM_PAINT:
-            {
-                hdc = BeginPaint(hwnd, &ps);
-                fontCorbel = CreateFont(20, 0, 0, 0, FW_BOLD, false, false, false,
-                                        DEFAULT_CHARSET, OUT_DEFAULT_PRECIS, CLIP_DEFAULT_PRECIS,
-                                        DEFAULT_QUALITY, FF_DONTCARE, "Corbel");
-                SetBkMode(hdc, TRANSPARENT);
-                GetClientRect(hwnd, &rect);
-                fontText1 = (HFONT)SelectObject(hdc, fontCorbel);
-                DrawText(hdc, "\nTEXT'S COLOR TRANSFORMER", -1, &rect, DT_TOP | DT_CENTER);
-                buttonFont = CreateFont(20, 0, 0, 0, FW_DONTCARE, false, false, false,
-                                        DEFAULT_CHARSET, OUT_DEFAULT_PRECIS, CLIP_DEFAULT_PRECIS,
-                                        DEFAULT_QUALITY, FF_DONTCARE, "Consolas");
-                SendMessage(buttonRed, WM_SETFONT, WPARAM(buttonFont), TRUE);
-                SendMessage(buttonGreen, WM_SETFONT, WPARAM(buttonFont), TRUE);
-                SendMessage(buttonBlue, WM_SETFONT, WPARAM(buttonFont), TRUE);
-                temp2 = CreateFont(14, 0, 0, 0, FW_DONTCARE, false, false, false,
-                                        DEFAULT_CHARSET, OUT_DEFAULT_PRECIS, CLIP_DEFAULT_PRECIS,
-                                        DEFAULT_QUALITY, FF_DONTCARE, "Arial");
-                temp1 = (HFONT)SelectObject(hdc, temp2);
-                SetTextColor(hdc, RGB(255, 0, 0));
-                DrawText(hdc, "by Dimm � ", -1, &rect, DT_TOP | DT_RIGHT);
-                EndPaint(hwnd, &ps);
-                break;
-            }
+        {
+            hdc = BeginPaint(hwnd, &ps);
+            fontCorbel = CreateFont(20, 0, 0, 0, FW_BOLD, false, false, false,
+                                    DEFAULT_CHARSET, OUT_DEFAULT_PRECIS, CLIP_DEFAULT_PRECIS,
+                                    DEFAULT_QUALITY, FF_DONTCARE, "Corbel");
+            SetBkMode(hdc, TRANSPARENT);
+            GetClientRect(hwnd, &rect);
+            fontText1 = (HFONT)SelectObject(hdc, fontCorbel);
+            DrawText(hdc, "\nTEXT'S COLOR TRANSFORMER", -1, &rect, DT_TOP | DT_CENTER);
+            buttonFont = CreateFont(20, 0, 0, 0, FW_DONTCARE, false, false, false,
+                                    DEFAULT_CHARSET, OUT_DEFAULT_PRECIS, CLIP_DEFAULT_PRECIS,
+                                    DEFAULT_QUALITY, FF_DONTCARE, "Consolas");
+            SendMessage(buttonRed, WM_SETFONT, WPARAM(buttonFont), TRUE);
+            SendMessage(buttonGreen, WM_SETFONT, WPARAM(buttonFont), TRUE);
+            SendMessage(buttonBlue, WM_SETFONT, WPARAM(buttonFont), TRUE);
+            temp2 = CreateFont(14, 0, 0, 0, FW_DONTCARE, false, false, false,
+                                    DEFAULT_CHARSET, OUT_DEFAULT_PRECIS, CLIP_DEFAULT_PRECIS,
+                                    DEFAULT_QUALITY, FF_DONTCARE, "Arial");
+            temp1 = (HFONT)SelectObject(hdc, temp2);
+            SetTextColor(hdc, RGB(255, 0, 0));
+            DrawText(hdc, "by Dimm � ", -1, &rect, DT_TOP | DT_RIGHT);
+            EndPaint(hwnd, &ps);
+            break;
+        }
 
         case WM_GETMINMAXINFO:
-            {
-                LPMINMAXINFO winSize = (LPMINMAXINFO)lParam;
-                winSize->ptMinTrackSize.x = 510;
-                winSize->ptMinTrackSize.y = 375;
-                winSize->ptMaxTrackSize.x = 630;
-                winSize->ptMaxTrackSize.y = 425;
-                break;
-            }
+        {
+            LPMINMAXINFO winSize = (LPMINMAXINFO)lParam;
+            winSize->ptMinTrackSize.x = 510;
+            winSize->ptMinTrackSize.y = 375;
+            winSize->ptMaxTrackSize.x = 630;
+            winSize->ptMaxTrackSize.y = 425;
+            break;
+        }
 
         case WM_COMMAND:
             switch(LOWORD(wParam))
+            {
+                case IDC_BUTTON1:
                 {
-                    case IDC_BUTTON1:
-                        {
-                            textSize = SendMessage(textArea1, WM_GETTEXT, 100, (LPARAM)textStore); // text size
-                            textStore[textSize] = _T('\0'); // initialization with null character
-                            SendMessage(textArea2, EM_REPLACESEL, 0, (LPARAM)textStore); // add inputed text to window
-                            SendMessage(textArea2, EM_REPLACESEL, 0, (LPARAM)" ");
-                            RedrawWindow(hwnd, NULL, NULL, RDW_INVALIDATE | RDW_ERASE);
-                            fontCorbel = CreateFont(20, 0, 0, 0, FW_DONTCARE, false, false, false,
-                                                    DEFAULT_CHARSET, OUT_DEFAULT_PRECIS, CLIP_DEFAULT_PRECIS,
-                                                    DEFAULT_QUALITY, FF_DONTCARE, "Corbel");
-                            SendMessage(textArea2, WM_SETFONT, (WPARAM)fontCorbel, TRUE);
-                            break;
-                        }
-
-                    case IDC_BUTTON2:
-                        {
-                            SendMessage(textArea2, WM_SETTEXT, NULL, NULL);
-                            break;
-                        }
-
-                    case IDC_BUTTON3:
-                        {
-                            textFlagRed = true;
-                            textFlagBlue = false;
-                            textFlagGreen = false;
-                            InvalidateRect(textArea2, NULL, TRUE);
-                            break;
-                        }
-
-                    case IDC_BUTTON4:
-                        {
-                            textFlagGreen = true;
-                            textFlagBlue = false;
-                            textFlagRed = false;
-                            InvalidateRect(textArea2, NULL, TRUE);
-                            break;
-                        }
-
-                    case IDC_BUTTON5:
-                        {
-                            textFlagBlue = true;
-                            textFlagRed = false;
-                            textFlagGreen = false;
-                            InvalidateRect(textArea2, NULL, TRUE);
-                            break;
-                        }
+                    textSize = SendMessage(textArea1, WM_GETTEXT, 100, (LPARAM)textStore); // text size
+                    textStore[textSize] = _T('\0'); // initialization with null character
+                    SendMessage(textArea2, EM_REPLACESEL, 0, (LPARAM)textStore); // add inputed text to window
+                    SendMessage(textArea2, EM_REPLACESEL, 0, (LPARAM)" ");
+                    RedrawWindow(hwnd, NULL, NULL, RDW_INVALIDATE | RDW_ERASE);
+                    fontCorbel = CreateFont(20, 0, 0, 0, FW_DONTCARE, false, false, false,
+                                    DEFAULT_CHARSET, OUT_DEFAULT_PRECIS, CLIP_DEFAULT_PRECIS,
+                                    DEFAULT_QUALITY, FF_DONTCARE, "Corbel");
+                    SendMessage(textArea2, WM_SETFONT, (WPARAM)fontCorbel, TRUE);
+                    break;
                 }
-            break;
+
+                case IDC_BUTTON2:
+                {
+                    SendMessage(textArea2, WM_SETTEXT, NULL, NULL);
+                    break;
+                }
+
+                case IDC_BUTTON3:
+                {
+                    textFlagRed = true;
+                    textFlagBlue = false;
+                    textFlagGreen = false;
+                    InvalidateRect(textArea2, NULL, TRUE);
+                    break;
+                }
+
+                case IDC_BUTTON4:
+                {
+                    textFlagGreen = true;
+                    textFlagBlue = false;
+                    textFlagRed = false;
+                    InvalidateRect(textArea2, NULL, TRUE);
+                    break;
+                }
+
+                case IDC_BUTTON5:
+                {
+                    textFlagBlue = true;
+                    textFlagRed = false;
+                    textFlagGreen = false;
+                    InvalidateRect(textArea2, NULL, TRUE);
+                    break;
+                }
+                }
+        break;
 
         case WM_SYSCOMMAND:
+        {
             switch(wParam)
+            {
+                case SC_MINIMIZE:
                 {
-                    case SC_MINIMIZE:
+                    srand(time(NULL));
+                    a = rand() % 255 + 1;
+                    b = rand() % 255 + 1;
+                    c = rand() % 255 + 1;
+                    backgFlag = true;
+                    if(backgFlag == true)
+                    {
+                        SetClassLong(hwnd, GCL_HBRBACKGROUND, (LONG)CreateSolidBrush(RGB(a, b, c)));
+                    }
+                    InvalidateRect(hwnd, NULL, TRUE);
+                    break;
+                }
+
+                case SC_MAXIMIZE:
+                {
+                    double i = 20;
+                    while (i < 330)
+                    {
+                        SetWindowPos(hwnd, HWND_TOP, 411, i,544, 375, SWP_SHOWWINDOW);
+                        i = i + 0.1;
+                    }
+                    while (i > 20)
+                    {
+                        SetWindowPos(hwnd, HWND_TOP, 411, i,544, 375, SWP_SHOWWINDOW);
+                        i = i - 0.1;
+                    }
+                    break;
+                 }
+
+                 case SC_CLOSE:
+                 {
+                    if(MessageBox(hwnd, "Do you want to close the program?", "Alert", MB_YESNO) == IDYES)
                         {
-                            srand(time(NULL));
-                            a = rand() % 255 + 1;
-                            b = rand() % 255 + 1;
-                            c = rand() % 255 + 1;
-                            backgFlag = true;
-                            if(backgFlag == true)
-                                {
-                                    SetClassLong(hwnd, GCL_HBRBACKGROUND, (LONG)CreateSolidBrush(RGB(a, b, c)));
-                                }
-                            InvalidateRect(hwnd, NULL, TRUE);
-                            break;
+                            exit(1);
                         }
+                        break;
+                 }
 
-                    case SC_MAXIMIZE:
-                        {
-                            double i = 20;
-                            while (i < 330)
-                            {
-                                SetWindowPos(hwnd, HWND_TOP, 411, i,544, 375, SWP_SHOWWINDOW);
-                                i = i + 0.1;
-                            }
-                            while (i > 20)
-                            {
-                                SetWindowPos(hwnd, HWND_TOP, 411, i,544, 375, SWP_SHOWWINDOW);
-                                i = i - 0.1;
-
-                            }
-                            break;
-                        }
-
-                    case SC_CLOSE:
-                        {
-                            if(MessageBox(hwnd, "Do you want to close the program?", "Alert", MB_YESNO) == IDYES)
-                            {
-                                exit(1);
-                            }
-                            break;
-                        }
-
-
-
-                    default:
-                        return DefWindowProc(hwnd, message, wParam, lParam);
+                 default:
+                     return DefWindowProc(hwnd, message, wParam, lParam);
                 }
             break;
 
         case WM_SIZE:
-            {
-                cxCoord = LOWORD(lParam); // 544
-                cyCoord = HIWORD(lParam); // 375
-                MoveWindow(textArea1, 20, 45, cxCoord-40, cyCoord/2-97, TRUE);
-                MoveWindow(buttonSubmit, 20, cyCoord/2-40, cxCoord-430, cyCoord/2-144, TRUE);
-                MoveWindow(buttonClear, 411, cyCoord/2-40, cxCoord-430, cyCoord/2-144, TRUE);
-                MoveWindow(textArea2, 20, cyCoord-170, cxCoord-40, cyCoord/2-97, TRUE);
-                MoveWindow(buttonRed, 20, (cyCoord-200) + cyCoord/2-55, cxCoord-425, cyCoord/2-135, TRUE);
-                MoveWindow(buttonBlue, 406, (cyCoord-200) + cyCoord/2-55, cxCoord-425, cyCoord/2-135, TRUE);
-                MoveWindow(buttonGreen, 213, (cyCoord-200) + cyCoord/2-55, cxCoord-425, cyCoord/2-135, TRUE);
-                break;
-            }
+        {
+            cxCoord = LOWORD(lParam); // 544
+            cyCoord = HIWORD(lParam); // 375
+            MoveWindow(textArea1, 20, 45, cxCoord-40, cyCoord/2-97, TRUE);
+            MoveWindow(buttonSubmit, 20, cyCoord/2-40, cxCoord-430, cyCoord/2-144, TRUE);
+            MoveWindow(buttonClear, 411, cyCoord/2-40, cxCoord-430, cyCoord/2-144, TRUE);
+            MoveWindow(textArea2, 20, cyCoord-170, cxCoord-40, cyCoord/2-97, TRUE);
+            MoveWindow(buttonRed, 20, (cyCoord-200) + cyCoord/2-55, cxCoord-425, cyCoord/2-135, TRUE);
+            MoveWindow(buttonBlue, 406, (cyCoord-200) + cyCoord/2-55, cxCoord-425, cyCoord/2-135, TRUE);
+            MoveWindow(buttonGreen, 213, (cyCoord-200) + cyCoord/2-55, cxCoord-425, cyCoord/2-135, TRUE);
+            break;
+        }
+        
         case WM_CTLCOLOREDIT:
+        {
+            if(IDC_TEXT1 == GetDlgCtrlID((HWND)lParam))
             {
-                if(IDC_TEXT1 == GetDlgCtrlID((HWND)lParam))
-                    {
-                        textArea1Brush = CreateSolidBrush(RGB(198, 226, 255));
-                        SetBkMode((HDC)wParam, TRANSPARENT);
-                        return(INT_PTR)textArea1Brush;
-                    }
-
-                break;
-
+                textArea1Brush = CreateSolidBrush(RGB(198, 226, 255));
+                SetBkMode((HDC)wParam, TRANSPARENT);    
+                return(INT_PTR)textArea1Brush;
             }
+            break;
+        }
 
         case WM_CTLCOLORSTATIC:
+        {
+            if(textFlagRed == true && (HWND)lParam == textArea2)
             {
-                if(textFlagRed == true && (HWND)lParam == textArea2)
-                    {
-                        HBRUSH hbr = (HBRUSH) DefWindowProc(hwnd, message, wParam, lParam);
-                        SetTextColor((HDC) wParam, RGB(255, 0, 0));
-                        return (BOOL) hbr;
-                    }
-                else if(textFlagBlue == true && (HWND)lParam == textArea2)
-                    {
-                        HBRUSH hbr = (HBRUSH) DefWindowProc(hwnd, message, wParam, lParam);
-                        SetTextColor((HDC) wParam, RGB(0, 0, 255));
-                        return (BOOL) hbr;
-                    }
-                else if(textFlagGreen == true && (HWND)lParam == textArea2)
-                    {
-                        HBRUSH hbr = (HBRUSH) DefWindowProc(hwnd, message, wParam, lParam);
-                        SetTextColor((HDC) wParam, RGB(0, 255, 0));
-                        return (BOOL) hbr;
-                    }
-                break;
+                HBRUSH hbr = (HBRUSH) DefWindowProc(hwnd, message, wParam, lParam);
+                SetTextColor((HDC) wParam, RGB(255, 0, 0));
+                return (BOOL) hbr;
             }
+            else if(textFlagBlue == true && (HWND)lParam == textArea2)
+            {
+                HBRUSH hbr = (HBRUSH) DefWindowProc(hwnd, message, wParam, lParam);
+                SetTextColor((HDC) wParam, RGB(0, 0, 255));
+                return (BOOL) hbr;
+            }
+            else if(textFlagGreen == true && (HWND)lParam == textArea2)
+            {
+                HBRUSH hbr = (HBRUSH) DefWindowProc(hwnd, message, wParam, lParam);
+                SetTextColor((HDC) wParam, RGB(0, 255, 0));
+                return (BOOL) hbr;
+            }
+            break;
+        }
 
         case WM_DESTROY:
-            {
-                PostQuitMessage (0);       /* send a WM_QUIT to the message queue */
-                break;
-            }
+        {
+            PostQuitMessage (0);       /* send a WM_QUIT to the message queue */
+            break;
+        }
 
         default:                      /* for messages that we don't deal with */
             return DefWindowProc (hwnd, message, wParam, lParam);
