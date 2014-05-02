@@ -1,2 +1,2 @@
-Laboratory works on Integrated Development Environment
+Laboratory works on Integrated Development Environments
 
