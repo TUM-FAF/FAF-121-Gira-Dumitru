@@ -43,14 +43,13 @@ This is done by using in `WM_SIZE` message, the `MoveWindow()` function which ha
       `InvalidateRect()` function.
 
   - **Change behavior of different window actions (at least 3) (1 pt)**
-
-Custom window actions, should be defined in `WM_SYSCOMMAND` message.
-       - By clicking `Minimize` button, the background color of the window is changed.<br>
+    - By clicking `Minimize` button, the background color of the window is changed.<br>
       I've created 3 variables that can take random values in range (0,255), and then used `SetClassLong(hwnd,
       GCL_HBRBACKGROUND, (LONG)CreateSolidBrush(RGB(a, b, c)))`
-       - By clicking `Maximaze` button, the window is moving up and down on the desktop. <br>
+    - By clicking `Maximaze` button, the window is moving up and down on the desktop. <br>
       This was done by using `SetWindowPos()` in 2 `for` loops, one for top limit, and another for bottom limit.
-       - By clicking `Close` button, a message is appearing which waits for user's response(YES/NO) to exit from the
+    - By clicking `Close` button, a message is appearing which waits for user's response(YES/NO) to exit from the
       program.In order to do this, `MessageBox()` function is used.
 
+All window actions, should be defined in `WM_SYSCOMMAND` message.
       
