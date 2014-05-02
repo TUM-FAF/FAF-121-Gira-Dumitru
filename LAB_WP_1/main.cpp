@@ -56,7 +56,7 @@ int WINAPI WinMain (HINSTANCE hThisInstance,
     hwnd = CreateWindowEx (
            0,                   /* Extended possibilites for variation */
            szClassName,         /* Classname */
-           _T("Petzold Sucks #1"),       /* Title Text */
+           _T("Windows Programming #1"),       /* Title Text */
            WS_OVERLAPPEDWINDOW, /* default window */
            411,       /* Windows decides the position */
            179,       /* where the window ends up on the screen */
@@ -167,7 +167,7 @@ LRESULT CALLBACK WindowProcedure (HWND hwnd, UINT message, WPARAM wParam, LPARAM
                                         DEFAULT_QUALITY, FF_DONTCARE, "Arial");
                 temp1 = (HFONT)SelectObject(hdc, temp2);
                 SetTextColor(hdc, RGB(255, 0, 0));
-                DrawText(hdc, "by Dimm © ", -1, &rect, DT_TOP | DT_RIGHT);
+                DrawText(hdc, "by Dimm ï¿½ ", -1, &rect, DT_TOP | DT_RIGHT);
                 EndPaint(hwnd, &ps);
                 break;
             }
