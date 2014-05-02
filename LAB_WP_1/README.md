@@ -31,4 +31,6 @@ Text elements were created in `WM_PAINT` message with `DrawText()` function. To 
 This is done by using in `WM_SIZE` message, the `MoveWindow()` function which has 2 important coordinates `LOWORD(lParam)` - stands for 'x' and `HIWORD(lParam)` - stands for 'y'. To limit min/max window size on resizing, use the `WM_GETMINMAXINFO` message and set `ptMinTrackSize/ptMaxTrackSize` parameters. 
 
   - **Make elements to interact or change other elements (0-2 pt)**
-    - hey
+    - By clicking `Submit` button, the text from `textArea1` is sent to `textArea2`<br>
+      The text from `textArea` is stored in `textStore` then is sent to `textArea` through `SendMessage(textArea2,      
+      EM_REPLACESEL, 0, (LPARAM)textStore)`
