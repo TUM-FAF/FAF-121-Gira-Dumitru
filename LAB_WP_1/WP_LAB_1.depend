@@ -1,7 +1,0 @@
-# depslib dependency file v1.0
-1398544201 source:c:\users\id1mk_000\desktop\wp_lab_1\main.cpp
-	<tchar.h>
-	<windows.h>
-	<stdlib.h>
-	<time.h>
-
