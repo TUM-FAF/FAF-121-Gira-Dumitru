@@ -54,4 +54,4 @@ This is done by using in `WM_SIZE` message, the `MoveWindow()` function which ha
 All window actions, should be defined in `WM_SYSCOMMAND` message.
       
 ###Program Overview
-![overview](https://raw.githubusercontent.com/Dimmm/WP/master/LAB_WP_1/work.gif)
+![overview](https://raw.githubusercontent.com/Dimmm/WP/master/WP_LAB_1/work.gif)
