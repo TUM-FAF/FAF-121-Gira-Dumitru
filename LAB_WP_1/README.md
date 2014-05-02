@@ -39,5 +39,18 @@ This is done by using in `WM_SIZE` message, the `MoveWindow()` function which ha
     - By clicking `Red, Green, Blue` buttons, the text color from `textArea2` is colored respectively.<br>
       As this text input is read-only, all messages are managed in `WM_CTLCOLORSTATIC`. To have 3 colors, I've used 3   
       different flags, so when one is enabled, 2 others - are disabled. Were created local brushes and text color has     
-      been set using `SetTextColor`. Also it is important to update the region after the button is cliked using 
-      `InvalidateRect` function.
+      been set using `SetTextColor()`. Also it is important to update the region after the button is cliked using 
+      `InvalidateRect()` function.
+
+  - **Change behavior of different window actions (at least 3) (1 pt)**
+
+Custom window actions, should be defined in `WM_SYSCOMMAND` message.
+    - By clicking `Minimize` button, the background color of the window is changed.<br>
+      I've created 3 variables that can take random values in range (0,255), and then used `SetClassLong(hwnd,
+      GCL_HBRBACKGROUND, (LONG)CreateSolidBrush(RGB(a, b, c)))`
+    - By clicking `Maximaze` button, the window is moving up and down on the desktop. <br>
+      This was done by using `SetWindowPos()` in 2 `for` loops, one for top limit, and another for bottom limit.
+    - By clicking `Close` button, a message is appearing which waits for user's response(YES/NO) to exit from the
+      program.In order to do this, `MessageBox()` function is used.
+
+      
