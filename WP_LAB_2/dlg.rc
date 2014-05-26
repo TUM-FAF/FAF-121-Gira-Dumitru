@@ -16,7 +16,7 @@ IDM_MENU MENU DISCARDABLE
 BEGIN
     POPUP "&File"
     BEGIN
-        MENUITEM "&Exit             LCtrl+W", ID_EXIT
+        MENUITEM "&Exit              Ctrl+W", ID_EXIT
     END
     POPUP "&Actions"
     BEGIN
@@ -24,7 +24,7 @@ BEGIN
     END
     POPUP "&About"
     BEGIN
-        MENUITEM "&About             F12", ID_ABOUT
+        MENUITEM "&About             Ctrl+I", ID_ABOUT
     END
 END
 

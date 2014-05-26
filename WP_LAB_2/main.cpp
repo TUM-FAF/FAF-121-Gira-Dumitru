@@ -127,6 +127,8 @@ LRESULT CALLBACK WindowProcedure (HWND hwnd, UINT message, WPARAM wParam, LPARAM
             xMax = 255;
             SetScrollRange(scrollBarColor, SB_CTL, xMin, xMax, FALSE);
             SetScrollPos(scrollBarColor, SB_CTL, xPos, TRUE);
+            RegisterHotKey(hwnd, HK_EXIT, MOD_CONTROL, 0x57);
+            RegisterHotKey(hwnd, HK_ABOUT, MOD_CONTROL, 0x49);
             hInstance = ((LPCREATESTRUCT)lParam)->hInstance;
             break;
         }
@@ -195,7 +197,7 @@ LRESULT CALLBACK WindowProcedure (HWND hwnd, UINT message, WPARAM wParam, LPARAM
                         buffer[textLength + 1] = _T('\0');
                         SendMessage(listBox, LB_GETTEXT, (WPARAM)index, (LPARAM)buffer);
                         char buffer1[50] = "You've selected \0";
-                        char * buffer2 = new char[textLength + 1 + strlen(buffer1) + 10];
+                        char * buffer2 = new char[textLength + 1 + strlen(buffer1) + 20];
                         buffer2[0] = '\0';
                         strcat(buffer2, buffer1); strcat(buffer2, buffer);
                         MessageBox(NULL, buffer2, "About", MB_OK);
@@ -303,35 +305,6 @@ LRESULT CALLBACK WindowProcedure (HWND hwnd, UINT message, WPARAM wParam, LPARAM
             break;
         }
 
-        case WM_KEYDOWN:
-        {
-            switch(wParam)
-            {
-                case KEY_W:
-                {
-                    if(GetAsyncKeyState(VK_LCONTROL))
-                    {
-                        exit(1);
-                    }
-                    break;
-                }
-
-                case F12:
-                {
-                    if(GetAsyncKeyState(VK_F12))
-                    {
-                        DialogBox(hInstance, MAKEINTRESOURCE(IDD_DIALOG), hwnd, AboutDlgProc);
-                    }
-                    break;
-                }
-                default:
-                {
-                    return DefWindowProc (hwnd, message, wParam, lParam);
-                    break;
-                }
-            }
-        }
-
         case WM_CTLCOLOREDIT:
         {
             SetTextColor((HDC)wParam, RGB(xPos+1, 123, 255-xPos));
@@ -346,6 +319,28 @@ LRESULT CALLBACK WindowProcedure (HWND hwnd, UINT message, WPARAM wParam, LPARAM
             {
                 SetCursor(LoadCursor(hInstance, MAKEINTRESOURCE(ID_CURSOR)));
                 return TRUE;
+            }
+            break;
+        }
+
+        case WM_HOTKEY:
+        {
+            switch(wParam)
+            {
+                case HK_EXIT:
+                {
+                    PostQuitMessage(0);
+                    break;
+                }
+
+                case HK_ABOUT:
+                {
+                    DialogBox(hInstance, MAKEINTRESOURCE(IDD_DIALOG), hwnd, AboutDlgProc);
+                    break;
+                }
+
+                default:
+                    break;
             }
             break;
         }

@@ -6,12 +6,9 @@
 #define ID_BCKG 106
 #define IDI_ICON 107
 #define ID_CURSOR 108
-#define KEY_W 0x57
-#define F12 0x7B
 #define IDC_LISTBOX 109
 #define IDC_ADD 110
 #define IDC_SUBMIT 111
 #define IDC_SCROLL_COLOR 112
-#define IDC_SCROLL_WIDTH 113
-#define IDC_SCROLL_HEIGHT 114
-
+#define HK_EXIT 113
+#define HK_ABOUT 114
