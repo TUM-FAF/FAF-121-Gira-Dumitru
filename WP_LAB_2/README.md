@@ -20,18 +20,18 @@ The menu has been created in the .rc file. `POPUP` defines a menu item, `MENUITE
 
 I've created a scrollbar using `CreateWindowEx()` by specifying the 2nd parameter as `"SCROLLBAR"` and a `xPos` variable that is changing the way messages in the `WM_HSCROLL` are called. Color of the text is changing by using the `SetTextColor()` function together with `xPos` variable
 
-  - **Hook keyboard input. Add 2 custom events for 2 different keyboard combinations **
+  - **Hook keyboard input. Add 2 custom events for 2 different keyboard combinations**
 
 Hooks : `CTRL + W` for exiting from the application, and `CTRL + I` for displaying a dialog box. These actions are managed in the `WM_HOTKEY` case.
 
   - **Add a listbox and attach some events when any element is accessed (clicked) (2 pt)**
 
-I've created the listbox using `CreateWindowEx()` by specifying the 2nd parameter as `"LISTBOX"`. Elements in the listbox are added from the interaction between an editbox and a button. When an element from listbox is double-clicked, a messagebox with the name of selected element is displaying; when on a selected element from listbox is pressed right click, an alert is displayed about deleting the selected element. (this is done in the `WM_CONTEXTMENU` case. )
+I've created the listbox using `CreateWindowEx()` by specifying the 2nd parameter as `"LISTBOX"`. Elements in the listbox are added from the interaction between an editbox and a button. When an element from listbox is double-clicked, a messagebox with the name of selected element is displayed; when on a selected element from listbox is pressed right click, an alert is displayed about deleting the selected element. (this is done in the `WM_CONTEXTMENU` case. )
 
   - **Customize your application by adding an icon and using different cursor in application (1 pt)**
 
 A custom cursor and icon were added in the main folder. Then they were declared in the .rc file `IDI_ICON ICON DISCARDABLE "icon.ico"`
-and `ID_CURSOR CURSOR DISCARDABLE "cursor.cur". Also some of windowclass fields were changed `hIcon, hIconSm, hCursor` .
+and `ID_CURSOR CURSOR DISCARDABLE "cursor.cur"`. Also some of windowclass fields were changed `hIcon, hIconSm, hCursor` .
 
 ###Program Overview
-![overview](https://raw.githubusercontent.com/Dimmm/WP/master/WP_LAB_1/work.gif)
+![overview](https://raw.githubusercontent.com/Dimmm/WP/master/WP_LAB_2/work.gif)
