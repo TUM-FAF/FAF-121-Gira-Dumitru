@@ -1,2 +1,0 @@
-frosty weather
-used git pull command
