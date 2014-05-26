@@ -34,4 +34,4 @@ A custom cursor and icon were added in the main folder. Then they were declared 
 and `ID_CURSOR CURSOR DISCARDABLE "cursor.cur". Also some of windowclass fields were changed `hIcon, hIconSm, hCursor` .
 
 ###Program Overview
-![overview](https://raw.githubusercontent.com/Dimmm/WP/master/WP_LAB_1/work.gif)
+![overview](https://github.com/Dimmm/WP/blob/master/WP_LAB_2/work.gif)
