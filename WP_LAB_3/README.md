@@ -9,7 +9,7 @@ Basics of Working with Mouse. GDI Primitives. Bezier Curve.
 
   - **Draw few lines of different colors and weights**
 
-Lines are drawn with the `MoveToEx()` function which moves to the specified point and `LineTo()` - draws a line from specified position to a specified one. Color is set according to selected button from the group-box. Weight is equal to value entered in the weight field (by def = 4).
+Lines are drawn with the `MoveToEx()` function which moves to the specified point and `LineTo()` - draws a line from specified position to another one. Color is set according to selected button from the group-box. Weight is equal to value entered in the weight field (by def = 4).
 
   - **Draw a Bezier curve**
 
@@ -25,7 +25,7 @@ Objects that are drown with mouse, are managed in the `WM_LBUTTONDOWN` , `WM_LBU
 
   - **Draw a custom bitmap image (1 pt)**
 
-The bitmap image is drawn in Adobe Photoshop and has the resolution 20x170. The bitmap was attached to the application with the help of `LoadImage()` , `GetObject() and `BitBlt()` functions.
+The bitmap image is drawn in Adobe Photoshop and has the resolution 20x170. The bitmap was attached to the application with the help of `LoadImage()` , `GetObject()` and `BitBlt()` functions.
 
   - **Add a switch (button, select list...) that will change mouse ability to draw objects**
 
@@ -33,4 +33,4 @@ There is a group-box of radiocheck buttons for choosing desired color, made with
 Also there are several push buttons that allows the user to choose the desired tool to draw (paint).
 
 ###Program Overview
-![overview](https://raw.githubusercontent.com/Dimmm/WP/master/WP_LAB_2/work.gif)
+![overview](https://raw.githubusercontent.com/Dimmm/WP/master/WP_LAB_3/work.gif)
