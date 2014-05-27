@@ -1,0 +1,32 @@
+#include "dlg.h"
+#include <windows.h>
+
+IDD_DIALOG DIALOG DISCARDABLE  83, 35, 180, 100
+STYLE DS_MODALFRAME | WS_POPUP
+FONT 8, "MS Sans Serif"
+CAPTION "About"
+BEGIN
+    DEFPUSHBUTTON   "&OK", IDOK, 67, 75, 50, 14
+    ICON IDI_ICON, IDC_STATIC, 80, 7, 32, 32
+    CTEXT "Lab #2 on Windows Programming", IDC_STATIC, 7, 40, 165, 10
+    CTEXT "by Dimm ©", IDC_STATIC, 67, 57, 50, 10
+END
+
+IDM_MENU MENU DISCARDABLE
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&Exit              Ctrl+W", ID_EXIT
+    END
+    POPUP "&Actions"
+    BEGIN
+        MENUITEM "&Change background color", ID_BCKG
+    END
+    POPUP "&About"
+    BEGIN
+        MENUITEM "&About             Ctrl+I", ID_ABOUT
+    END
+END
+
+IDI_ICON ICON DISCARDABLE "icon.ico"
+ID_CURSOR CURSOR DISCARDABLE "cursor.cur"
