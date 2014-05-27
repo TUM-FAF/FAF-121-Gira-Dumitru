@@ -13,3 +13,17 @@
 1401144244 source:c:\users\id1mk_000\desktop\wp_lab_3\resource.rc
 	"resource.h"
 
+1401144244 source:c:\users\id1mk_000\desktop\git_\wp_lab_3\resource.rc
+	"resource.h"
+
+1401143997 c:\users\id1mk_000\desktop\git_\wp_lab_3\resource.h
+
+1401185210 source:c:\users\id1mk_000\desktop\git_\wp_lab_3\main.cpp
+	<tchar.h>
+	<windows.h>
+	<windowsx.h>
+	"resource.h"
+	<string.h>
+	<iostream>
+	<stdio.h>
+
