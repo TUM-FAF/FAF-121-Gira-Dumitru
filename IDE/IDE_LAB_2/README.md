@@ -45,6 +45,8 @@ Reset button has been created with `QPushButton()` class. When button is clicked
 
    - **Set a breakpoint in your application and check variables values at that moment of time (1pt)**
 
+Eclipse debugger was used.
+
    - **Create an installable application (1pt)**
 
 My installable application followed 2 steps. Firstly I've created a `setup.py` script where I described my module, included all the resources and main .py file. Therefore I've created an executable using `cx_freeze` scripts `python setup.py build`. <br>
