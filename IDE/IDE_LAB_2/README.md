@@ -58,4 +58,4 @@ After that I've used a already personalized installer, and created my own setup.
      - There is a highscore label, which reads from / writes into file.
 
 ###Program Overview
-![overview](https://raw.githubusercontent.com/TUM-FAF/FAF-121-Gira-Dumitru/master/IDE/IDE_LAB_2/work.gif
+![overview](https://raw.githubusercontent.com/TUM-FAF/FAF-121-Gira-Dumitru/master/IDE/IDE_LAB_2/work.gif)
