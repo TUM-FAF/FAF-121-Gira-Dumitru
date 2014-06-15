@@ -33,4 +33,4 @@ There is a group-box of radiocheck buttons for choosing desired color, made with
 Also there are several push buttons that allows the user to choose the desired tool to draw (paint).
 
 ###Program Overview
-![overview](https://raw.githubusercontent.com/Dimmm/WP/master/WP_LAB_3/work.gif)
+![overview](https://raw.githubusercontent.com/TUM-FAF/FAF-121-Gira-Dumitru/master/WP/WP_LAB_3/work.gif)
