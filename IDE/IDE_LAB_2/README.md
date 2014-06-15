@@ -57,4 +57,5 @@ After that I've used a already personalized installer, and created my own setup.
      - When Simulatron is started, a playback audio has introduced using `QSound()` and `play()` function.
      - There is a highscore label, which reads from / writes into file.
 
-
+###Program Overview
+![overview](https://raw.githubusercontent.com/TUM-FAF/FAF-121-Gira-Dumitru/master/IDE/IDE_LAB_2/work.gif
