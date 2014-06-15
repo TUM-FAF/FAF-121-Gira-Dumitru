@@ -21,7 +21,7 @@ Drawn objects : Ellipse with `Ellipse()` function, rectangle with `Rectangle()` 
 
   - **Draw 2 different objects using mouse**
 
-Objects that are drown with mouse, are managed in the `WM_LBUTTONDOWN` , `WM_LBUTTONUP` , `WM_MOUSEMOVE` and `WM_RBUTTONDOWN`. Objects that are drawn with mouse - Pen, Line, Polyline, Ellipse, Rectangle.
+Objects that are drawn with mouse, are managed in the `WM_LBUTTONDOWN` , `WM_LBUTTONUP` , `WM_MOUSEMOVE` and `WM_RBUTTONDOWN`. Objects that are drawn with mouse - Pen, Line, Polyline, Ellipse, Rectangle.
 
   - **Draw a custom bitmap image (1 pt)**
 
