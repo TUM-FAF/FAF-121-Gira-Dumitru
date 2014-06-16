@@ -26,4 +26,4 @@ I've just got my 3 bonus points.
     - Added keyboard shortcuts; on `CTRL+W` - exiting from application, `CTRL+SPACE` - change bkg color, `F12` - displaying a dialog box
 
 ###Program Overview
-![overview](https://github.com/TUM-FAF/FAF-121-Gira-Dumitru/blob/master/WP/WP_LAB_6/work.gif)
+![overview](https://raw.githubusercontent.com/TUM-FAF/FAF-121-Gira-Dumitru/master/WP/WP_LAB_6/work.gif)
