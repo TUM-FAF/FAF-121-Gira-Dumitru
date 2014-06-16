@@ -1,0 +1,10 @@
+C:\Users\id1mk_000\Desktop\WP_LAB_6\WP_LAB_6\bin\Debug\WP_LAB_6.exe.config
+C:\Users\id1mk_000\Desktop\WP_LAB_6\WP_LAB_6\bin\Debug\WP_LAB_6.exe
+C:\Users\id1mk_000\Desktop\WP_LAB_6\WP_LAB_6\bin\Debug\WP_LAB_6.pdb
+C:\Users\id1mk_000\Desktop\WP_LAB_6\WP_LAB_6\obj\Debug\WP_LAB_6.csprojResolveAssemblyReference.cache
+C:\Users\id1mk_000\Desktop\WP_LAB_6\WP_LAB_6\obj\Debug\WP_LAB_6.Form1.resources
+C:\Users\id1mk_000\Desktop\WP_LAB_6\WP_LAB_6\obj\Debug\WP_LAB_6.Properties.Resources.resources
+C:\Users\id1mk_000\Desktop\WP_LAB_6\WP_LAB_6\obj\Debug\WP_LAB_6.csproj.GenerateResource.Cache
+C:\Users\id1mk_000\Desktop\WP_LAB_6\WP_LAB_6\obj\Debug\WP_LAB_6.exe
+C:\Users\id1mk_000\Desktop\WP_LAB_6\WP_LAB_6\obj\Debug\WP_LAB_6.pdb
+C:\Users\id1mk_000\Desktop\WP_LAB_6\WP_LAB_6\obj\Debug\WP_LAB_6.Form2.resources

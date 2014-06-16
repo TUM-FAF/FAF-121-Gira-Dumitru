@@ -126,7 +126,7 @@ LRESULT CALLBACK WindowProcedure (HWND hwnd, UINT message, WPARAM wParam, LPARAM
             textArea2 = CreateWindowEx(WS_EX_CLIENTEDGE, TEXT("EDIT"), TEXT(" "),
                                        WS_VISIBLE | WS_CHILD | ES_MULTILINE | ES_AUTOVSCROLL | WS_VSCROLL | ES_READONLY,
                                        0, 0, 0, 0,
-                                       hwnd, (HMENU)IDC_TEXT1, GetModuleHandle(NULL), NULL);    
+                                       hwnd, (HMENU)IDC_TEXT1, GetModuleHandle(NULL), NULL);
             buttonRed = CreateWindowEx(NULL, TEXT("BUTTON"), TEXT("Red"),
                                        WS_VISIBLE | WS_CHILD | BS_DEFPUSHBUTTON,
                                        0, 0, 0, 0,
@@ -296,13 +296,13 @@ LRESULT CALLBACK WindowProcedure (HWND hwnd, UINT message, WPARAM wParam, LPARAM
             MoveWindow(buttonGreen, 213, (cyCoord-200) + cyCoord/2-55, cxCoord-425, cyCoord/2-135, TRUE);
             break;
         }
-        
+
         case WM_CTLCOLOREDIT:
         {
             if(IDC_TEXT1 == GetDlgCtrlID((HWND)lParam))
             {
                 textArea1Brush = CreateSolidBrush(RGB(198, 226, 255));
-                SetBkMode((HDC)wParam, TRANSPARENT);    
+                SetBkMode((HDC)wParam, TRANSPARENT);
                 return(INT_PTR)textArea1Brush;
             }
             break;
@@ -342,4 +342,4 @@ LRESULT CALLBACK WindowProcedure (HWND hwnd, UINT message, WPARAM wParam, LPARAM
     }
 
     return 0;
-}
+} }
