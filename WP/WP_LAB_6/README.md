@@ -21,9 +21,9 @@ I've just got my 3 bonus points.
 
   - **Claim points for your own tasks (up to 7pt)**
 
-New features that were not present in 1st laboratory work:
+      New features that were not present in 1st laboratory work:
     - Added a menu with `MenuStrip`, with options: `Exit` , `Change Background Color`, `About`
     - Added keyboard shortcuts; on `CTRL+W` - exiting from application, `CTRL+SPACE` - change bkg color, `F12` - displaying a dialog box
 
 ###Program Overview
-![overview]()
+![overview](https://github.com/TUM-FAF/FAF-121-Gira-Dumitru/blob/master/WP/WP_LAB_6/work.gif)
