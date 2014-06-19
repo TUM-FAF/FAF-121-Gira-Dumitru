@@ -12,7 +12,7 @@ Mobile Applications Development
 
 I've got familiar with basic knowledges about design of Android application.
 
-   - **Create a mobile app and launch it on emulator/simulator. Your app should have at least 3 element and one action **
+   - **Create a mobile app and launch it on emulator/simulator. Your app should have at least 3 element and one action**
 
 I've used the built-in Android Studio emulator. <br>
 My application contains elements of this kind `Spinner`, `TextView`, `EditText` and `Button`. <br>
@@ -35,7 +35,8 @@ In order to have 3 different views, I've created a TabHost which in the .xml loo
          <LinearLayout> HERE is THIRD TAB </LinearLayout>
        </FrameLayout>
      </LinearWidget>
-   </Tabhost>```
+   </Tabhost>
+```
 
 First view is page where user chooses an option using spinners, gives a name to configuration, and submits it.<br>
 Second view is page where last configuration is shown. <br>
