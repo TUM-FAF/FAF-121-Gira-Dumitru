@@ -43,6 +43,7 @@ Second view is page where last configuration is shown. <br>
 Third view is an about page.
 
    - **Create a responsive layout (1pt)**
+
 Responsive layout was created by specifying custom values to `layout-width` in percentages.
 
 
