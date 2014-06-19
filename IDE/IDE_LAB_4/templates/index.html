@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title %}Welcome to articles{% endblock %}
+
+{% block content %}
+
+
+    {% if posts %}
+        <ul>
+        {% for post in posts %}
+            <li><h1>{{ post.title }}</h1><p>{{ post.body }}</p></li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>There are no posts.</p>
+    {% endif %}
+
+{% endblock %}
