@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">IDE_LAB_3</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string-array name="CPU">
+        <item></item>
+        <item>Intel i7</item>
+        <item>Intel i5</item>
+        <item>Intel i3</item>
+        <item>Intel Core2Duo</item>
+        <item>Intel Celeron</item>
+        <item>AMD A6</item>
+    </string-array>
+    <string-array name="GPU">
+        <item></item>
+        <item>Nvidia</item>
+        <item>ATI</item>
+    </string-array>
+    <string-array name="RAM">
+        <item></item>
+        <item>1GB</item>
+        <item>2GB</item>
+        <item>4GB</item>
+        <item>6GB</item>
+        <item>8GB</item>
+        <item>12GB</item>
+        <item>16GB</item>
+    </string-array>
+    <string-array name="HDD">
+        <item></item>
+        <item>120GB</item>
+        <item>250GB</item>
+        <item>320GB</item>
+        <item>500GB</item>
+        <item>750GB</item>
+        <item>1TB</item>
+        <item>2TB</item>
+    </string-array>
+    <string-array name="Brand">
+        <item></item>
+        <item>Acer</item>
+        <item>Asus</item>
+        <item>Dell</item>
+        <item>HP</item>
+        <item>Lenovo</item>
+        <item>Samsung</item>
+    </string-array>
+    <string-array name="Display">
+        <item></item>
+        <item>13.3"</item>
+        <item>15.6"</item>
+        <item>17.3"</item>
+    </string-array>
+    <string-array name="OS">
+        <item></item>
+        <item>Windows</item>
+        <item>Linux</item>
+        <item>Mac OS</item>
+        <item>DOS</item>
+    </string-array>
+</resources>

@@ -1,0 +1,456 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/retina_480"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+    <TabHost
+
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/tabhost"
+        android:layout_gravity="left|center_vertical">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+            <TabWidget
+                android:background="#000000"
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </TabWidget>
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/Configuration"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+
+                    <TableLayout    android:layout_width="fill_parent"
+                        android:layout_height="fill_parent" >
+
+
+                        <TableRow
+                            android:paddingTop="10dp"
+                            android:gravity="left">
+
+                            <TextView
+                                android:id="@+id/status"
+                                android:paddingLeft="10dp"
+                                android:layout_width="wrap_content"
+
+                                android:text="Choose your laptop configuration:"
+                                android:textSize="20sp" />
+
+                        </TableRow>
+
+                        <TableRow android:paddingTop="10dp"
+                                  android:paddingLeft="10dp">
+                            <TextView
+                                android:layout_width="fill_parent"
+                                android:layout_height="1dp"
+                                android:background="#13ACF9"/>
+                        </TableRow>
+
+                        <TableRow>
+                            <TextView
+                                android:paddingTop="35dp"
+                                android:id="@+id/Brand"
+                                android:paddingLeft="20dp"
+                                android:layout_height="wrap_content"
+                                android:layout_width="0dp"
+                                android:text="BRAND"
+                                android:textStyle="bold"
+                                android:textSize="20sp"
+                                android:textColor="@android:color/white"
+                                android:layout_weight="0.6"/>
+                            <Spinner
+                                android:layout_height="wrap_content"
+                                android:layout_width="0dp"
+                                android:entries="@array/Brand"
+                                android:id="@+id/spinner1"
+                                android:layout_weight="0.4"/>
+                        </TableRow>
+
+                        <TableRow android:paddingTop="20dp">
+                            <TextView
+                                android:id="@+id/Display"
+                                android:paddingLeft="20dp"
+                                android:layout_height="wrap_content"
+                                android:layout_width="0dp"
+                                android:text="DISPLAY"
+                                android:textColor="@android:color/white"
+                                android:textStyle="bold"
+                                android:textSize="20sp"
+                                android:layout_weight="0.6"/>
+                            <Spinner
+                                android:layout_height="wrap_content"
+                                android:layout_width="0dp"
+                                android:entries="@array/Display"
+                                android:id="@+id/spinner2"
+                                android:layout_weight="0.4"/>
+                        </TableRow>
+
+                        <TableRow android:paddingTop="20dp">
+
+                            <TextView
+                                android:id="@+id/CPU"
+                                android:paddingLeft="20dp"
+                                android:layout_height="wrap_content"
+                                android:layout_width="0dp"
+                                android:text="CPU"
+                                android:textColor="@android:color/white"
+                                android:textStyle="bold"
+                                android:textSize="20sp"
+                                android:layout_weight="0.6"/>
+                            <Spinner
+                                android:layout_height="wrap_content"
+                                android:layout_width="0dp"
+                                android:entries="@array/CPU"
+                                android:id="@+id/spinner3"
+                                android:layout_weight="0.4" />
+
+                        </TableRow>
+
+                        <TableRow android:paddingTop="20dp">
+                            <TextView
+                                android:id="@+id/GPU"
+                                android:paddingLeft="20dp"
+                                android:layout_height="wrap_content"
+                                android:layout_width="0dp"
+                                android:textColor="@android:color/white"
+                                android:text="GPU"
+                                android:textStyle="bold"
+                                android:textSize="20sp"
+                                android:layout_weight="0.6"/>
+                            <Spinner
+                                android:layout_height="wrap_content"
+                                android:layout_width="0dp"
+                                android:entries="@array/GPU"
+                                android:id="@+id/spinner4"
+                                android:layout_weight="0.4"/>
+                        </TableRow>
+
+                        <TableRow android:paddingTop="20dp">
+                            <TextView
+                                android:id="@+id/RAM"
+                                android:paddingLeft="20dp"
+                                android:layout_height="wrap_content"
+                                android:layout_width="0dp"
+                                android:text="RAM"
+                                android:textColor="@android:color/white"
+                                android:textStyle="bold"
+                                android:textSize="20sp"
+                                android:layout_weight="0.6"/>
+                            <Spinner
+                                android:layout_height="wrap_content"
+                                android:layout_width="0dp"
+                                android:entries="@array/RAM"
+                                android:id="@+id/spinner5"
+                                android:layout_weight="0.4"/>
+                        </TableRow>
+
+                        <TableRow android:paddingTop="20dp">
+                            <TextView
+                                android:id="@+id/HDD"
+                                android:paddingLeft="20dp"
+                                android:layout_height="wrap_content"
+                                android:layout_width="0dp"
+                                android:text="HDD"
+                                android:textColor="@android:color/white"
+                                android:textStyle="bold"
+                                android:textSize="20sp"
+                                android:layout_weight="0.6"/>
+                            <Spinner
+                                android:layout_height="wrap_content"
+                                android:layout_width="0dp"
+                                android:entries="@array/HDD"
+                                android:id="@+id/spinner6"
+                                android:layout_weight="0.4"/>
+                        </TableRow>
+
+                        <TableRow android:paddingTop="20dp">
+                            <TextView
+                                android:id="@+id/OS"
+                                android:paddingLeft="20dp"
+                                android:layout_height="wrap_content"
+                                android:layout_width="0dp"
+                                android:text="OS"
+                                android:textColor="@android:color/white"
+                                android:textStyle="bold"
+                                android:textSize="20sp"
+                                android:layout_weight="0.6"/>
+                            <Spinner
+                                android:layout_height="wrap_content"
+                                android:layout_width="0dp"
+                                android:entries="@array/OS"
+                                android:id="@+id/spinner7"
+                                android:layout_weight="0.4"/>
+                        </TableRow>
+
+                        <TableRow android:paddingTop="45dp"
+                                  android:layout_marginRight="40dp"
+                                  >
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="20dp"
+                                android:text="Save as: "
+                                android:textColor="@android:color/white"
+                                android:textStyle="bold"
+                                android:textSize="20sp"
+                                android:layout_weight="0.4"/>
+                            <EditText
+                                android:layout_width="0dp"
+                                android:layout_height="42dp"
+                                android:paddingTop="0dp"
+                                android:layout_weight="0.6"
+                                android:paddingRight="40dp"
+                                android:singleLine="true"
+                                android:maxLength="14"
+                                android:id="@+id/textArea"/>
+
+
+                        </TableRow>
+
+                        <TableRow android:gravity="center">
+                            <Button
+                                android:layout_marginTop="25dp"
+                                android:paddingBottom="20dp"
+                                android:paddingTop="15dp"
+                                android:textSize="25dp"
+                                android:textColor="@android:color/white"
+                                android:text="Submit"
+                                android:layout_height="wrap_content"
+                                android:background="#66FF0000"
+                                android:layout_marginBottom="26dp"
+                                android:id="@+id/submitB"
+                                />
+                        </TableRow>
+
+
+                    </TableLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/List"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <TableRow
+                            android:paddingTop="10dp"
+                            android:gravity="left">
+
+                            <TextView
+                                android:id="@+id/sv_name"
+                                android:paddingLeft="10dp"
+                                android:layout_width="wrap_content"
+                                android:textColor="@android:color/white"
+                                android:textSize="20sp" />
+
+                        </TableRow>
+
+                        <TableRow android:paddingTop="10dp"
+                            android:paddingLeft="10dp">
+                            <TextView
+                                android:layout_width="fill_parent"
+                                android:layout_height="1dp"
+                                android:background="#13ACF9"/>
+                        </TableRow>
+                    <TableRow>
+                        <TextView
+                            android:paddingTop="35dp"
+                            android:id="@+id/Brand2"
+                            android:paddingLeft="20dp"
+                            android:layout_height="wrap_content"
+                            android:layout_width="0dp"
+                            android:text="BRAND"
+                            android:textStyle="bold"
+                            android:textSize="20sp"
+                            android:textColor="@android:color/white"
+                            android:layout_weight="0.5"/>
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:layout_width="0dp"
+                            android:id="@+id/show1"
+                            android:textSize="20sp"
+                            android:layout_weight="0.5"/>
+                    </TableRow>
+
+                    <TableRow android:paddingTop="20dp">
+                        <TextView
+                            android:id="@+id/Display2"
+                            android:paddingLeft="20dp"
+                            android:layout_height="wrap_content"
+                            android:layout_width="0dp"
+                            android:text="DISPLAY"
+                            android:textColor="@android:color/white"
+                            android:textStyle="bold"
+                            android:textSize="20sp"
+                            android:layout_weight="0.5"/>
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:layout_width="0dp"
+                            android:id="@+id/show2"
+                            android:textSize="20sp"
+                            android:layout_weight="0.5"/>
+                    </TableRow>
+
+                    <TableRow android:paddingTop="20dp">
+
+                        <TextView
+                            android:id="@+id/CPU2"
+                            android:paddingLeft="20dp"
+                            android:layout_height="wrap_content"
+                            android:layout_width="0dp"
+                            android:text="CPU"
+                            android:textColor="@android:color/white"
+                            android:textStyle="bold"
+                            android:textSize="20sp"
+                            android:layout_weight="0.5"/>
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:layout_width="0dp"
+                            android:id="@+id/show3"
+                            android:textSize="20sp"
+                            android:layout_weight="0.5" />
+
+                    </TableRow>
+
+                    <TableRow android:paddingTop="20dp">
+                        <TextView
+                            android:id="@+id/GPU2"
+                            android:paddingLeft="20dp"
+                            android:layout_height="wrap_content"
+                            android:layout_width="0dp"
+                            android:textColor="@android:color/white"
+                            android:text="GPU"
+                            android:textStyle="bold"
+                            android:textSize="20sp"
+                            android:layout_weight="0.5"/>
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:layout_width="0dp"
+                            android:id="@+id/show4"
+                            android:textSize="20sp"
+                            android:layout_weight="0.5"/>
+                    </TableRow>
+
+                    <TableRow android:paddingTop="20dp">
+                        <TextView
+                            android:id="@+id/RAM2"
+                            android:paddingLeft="20dp"
+                            android:layout_height="wrap_content"
+                            android:layout_width="0dp"
+                            android:text="RAM"
+                            android:textColor="@android:color/white"
+                            android:textStyle="bold"
+                            android:textSize="20sp"
+                            android:layout_weight="0.5"/>
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:layout_width="0dp"
+                            android:id="@+id/show5"
+                            android:textSize="20sp"
+                            android:layout_weight="0.5"/>
+                    </TableRow>
+
+                    <TableRow android:paddingTop="20dp">
+                        <TextView
+                            android:id="@+id/HDD2"
+                            android:paddingLeft="20dp"
+                            android:layout_height="wrap_content"
+                            android:layout_width="0dp"
+                            android:text="HDD"
+                            android:textColor="@android:color/white"
+                            android:textStyle="bold"
+                            android:textSize="20sp"
+                            android:layout_weight="0.5"/>
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:layout_width="0dp"
+                            android:id="@+id/show6"
+                            android:textSize="20sp"
+                            android:layout_weight="0.5"/>
+                    </TableRow>
+
+                    <TableRow android:paddingTop="20dp">
+                        <TextView
+                            android:id="@+id/OS2"
+                            android:paddingLeft="20dp"
+                            android:layout_height="wrap_content"
+                            android:layout_width="0dp"
+                            android:text="OS"
+                            android:textColor="@android:color/white"
+                            android:textStyle="bold"
+                            android:textSize="20sp"
+                            android:layout_weight="0.5"/>
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:layout_width="0dp"
+                            android:id="@+id/show7"
+                            android:textSize="20sp"
+                            android:layout_weight="0.5"/>
+                    </TableRow>
+                    </TableLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:background="@drawable/android"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/About">
+                    <TableLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:id="@+id/gaiu">
+
+
+                        <TableRow android:gravity="center">
+                            <TextView
+                                android:layout_width="200dp"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="40dp"
+                                android:paddingLeft="20dp"
+                                android:text="Made by Dima Gîra"
+                                android:textStyle="bold"
+                                android:textSize="20sp"/>
+                        </TableRow>
+                        <TableRow android:gravity="center">
+                            <TextView
+                                android:layout_width="200dp"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="40dp"
+                                android:paddingLeft="67dp"
+                                android:text="2014 ©"
+                                android:textStyle="bold"
+                                android:textSize="20sp"/>
+                        </TableRow>
+
+                    </TableLayout>
+
+                 </LinearLayout>
+
+            </FrameLayout>
+            </ScrollView>
+        </LinearLayout>
+    </TabHost>
+
+</LinearLayout>
